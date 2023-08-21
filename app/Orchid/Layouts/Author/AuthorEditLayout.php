@@ -17,17 +17,19 @@ class AuthorEditLayout extends Rows
         return [
             Input::make('author.full_name')
                 ->type('text')
+                ->maxlength(150)
                 ->required()
                 ->title(__('Full name')),
 
             Input::make('author.country')
                 ->type('text')
-                ->max(255)
+                ->maxlength(100)
                 ->required()
                 ->title(__('Country')),
 
             TextArea::make('author.comment')
                 ->rows(10)
+                ->maxlength(500)
                 ->required()
                 ->title(__('Comment')),
         ];

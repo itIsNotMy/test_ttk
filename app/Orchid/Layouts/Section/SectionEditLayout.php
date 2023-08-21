@@ -17,11 +17,13 @@ class SectionEditLayout extends Rows
         return [
             Input::make('section.name')
                 ->type('text')
+                ->maxlength(150)
                 ->required()
                 ->title(__('Name')),
 
             TextArea::make('section.description')
                 ->rows(10)
+                ->maxlength(500)
                 ->required()
                 ->title(__('Description')),
         ];

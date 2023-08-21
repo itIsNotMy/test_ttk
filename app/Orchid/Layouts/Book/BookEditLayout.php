@@ -24,7 +24,7 @@ class BookEditLayout extends Rows
 
             Input::make('book.name')
                 ->type('text')
-                ->max(255)
+                ->max(150)
                 ->required()
                 ->title(__('Name'))
                 ->placeholder(__('Name')),
@@ -39,6 +39,7 @@ class BookEditLayout extends Rows
             TextArea::make('book.description')
                 ->required()
                 ->rows(10)
+                ->max(2000)
                 ->title(__('Description'))
                 ->placeholder(__('Description')),
 
