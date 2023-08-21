@@ -30,7 +30,8 @@ class BookEditLayout extends Rows
                 ->placeholder(__('Name')),
 
             Input::make('book.year')
-                ->type('year')
+                ->type('text')
+                ->maxlength(4)
                 ->required()
                 ->title(__('Year'))
                 ->placeholder(__('Year')),
